@@ -1,5 +1,5 @@
-name: quarkiverse-project
-title: Quarkiverse <YOUR_PROJECT>
+name: quarkus-mockk
+title: Quarkus Mockk
 version: dev
 nav:
   - modules/ROOT/nav.adoc
