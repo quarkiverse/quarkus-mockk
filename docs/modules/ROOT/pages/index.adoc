@@ -11,8 +11,8 @@ In your `pom.xml` file, add:
 [source,xml]
 ----
 <dependency>
-    <groupId>io.quarkiverse</groupId>
-    <artifactId>quarkiverse-freemarker</artifactId>
+    <groupId>io.quarkiverse.mockk</groupId>
+    <artifactId>quarkiverse-junit5-mockk</artifactId>
 </dependency>
 ----
 
