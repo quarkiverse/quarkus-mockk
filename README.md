@@ -1,31 +1,47 @@
-# Welcome to Quarkiverse!
+# Quarkus JUnit5 Mockk Extension
 
-Congratulations and thank you for creating a new Quarkus extension project in Quarkiverse!
+This **Quarkus JUnit5 Mockk** extension allows you to easily inject mockk mocks. 
 
-Feel free to replace this content with the proper description of your new project and necessary instructions how to use and contribute to it.
+First of all, you need to add the following dependency:
 
-You can find the basic info, Quarkiverse policies and conventions in [the Quarkiverse wiki](https://github.com/quarkiverse/quarkiverse/wiki).
-
-Need to quickly create a new Quarkus extension Maven project? Just execute the command below replacing the template values with your preferred ones:
+```xml
+<dependency>
+    <groupId>io.quarkiverse.mockk</groupId>
+    <artifactId>quarkus-junit5-mockk</artifactId>
+    <version>0.0.1</version>
+    <scope>test</scope>
+</dependency>
 ```
-mvn io.quarkus:quarkus-maven-plugin:<QUARKUS_VERSION>:create-extension -N \
-    -DgroupId=io.quarkiverse.<REPO_NAME> \ 
-    -DartifactId=<EXTENSION_ARTIFACT_ID> \  
-    -Dversion=<INITIAL_VERSION> \ 
-    -Dquarkus.nameBase="<EXTENSION_SIMPLE_NAME>"
+If you are using gradle: 
+
+````groovy
+dependencies {
+    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.0.1'
+}
+````
+
+Once the dependency is imported, you can use `@InjectMock` and `@InjectSpy` annotations such as:
+
+```java
+
 ```
-**IMPORTANT:** make sure your project uses [io.quarkiverse:quarkiverse-parent](https://github.com/quarkiverse/quarkiverse-parent) as the parent POM. It will make sure the release and artifact publishing plugins are properly configured for your project.
 
-In case you are creating a Quarkus extension project for the first time, please follow [Building My First Extension](https://quarkus.io/guides/building-my-first-extension) guide.
 
-Other useful articles related to Quarkus extension development can be found under the [Writing Extensions](https://quarkus.io/guides/#writing-extensions) guide category on the [Quarkus.io](http://quarkus.io) website.
+## Contributors ✨
 
-Thanks again, good luck and have fun!
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-## Documentation
+ <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+ <!-- prettier-ignore-start -->
+ <!-- markdownlint-disable -->
+ <table>
+   <tr>
+     <td align="center"><a href="https://github.com/zhfeng"><img src="https://avatars2.githubusercontent.com/u/1246139?v=4" width="100px;" alt=""/><br /><sub><b>Amos Feng</b></sub></a><br /><a href="https://github.com/quarkiverse/quarkiverse-mybatis/commits?author=zhfeng" title="Code">💻</a> <a href="#maintenance-zhfeng" title="Maintenance">🚧</a></td>
+   </tr>
+ </table>
 
-The documentation for this extension should be maintained as part of this repository and it is stored in the `docs/` directory. 
+ <!-- markdownlint-enable -->
+ <!-- prettier-ignore-end -->
+ <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-The layout should follow the [Antora's Standard File and Directory Set](https://docs.antora.org/antora/2.3/standard-directories/).
-
-Once the docs are ready to be published, please open a PR including this repository in the [Quarkiverse Docs Antora playbook](https://github.com/quarkiverse/quarkiverse-docs/blob/master/antora-playbook.yml#L7). See an example [here](https://github.com/quarkiverse/quarkiverse-docs/pull/1).
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
