@@ -1,9 +1,8 @@
 # Quarkus JUnit5 Mockk Extension
 
-[![Build](https://github.com/quarkiverse/quarkus-mockk/workflows/Build/badge.svg)](https://github.com/quarkiverse/quarkus-mockk/actions?query=workflow%3ABuild)
+[![GitHub Actions Status](<https://img.shields.io/github/workflow/status/quarkiverse/quarkus-mockk/Build?logo=GitHub&style=for-the-badge>)](https://github.com/quarkiverse/quarkus-mockk/actions?query=workflow%3ABuild)
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.mockk/quarkus-junit5-mockk?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.mockk/quarkus-junit5-mockk)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
+[![License](https://img.shields.io/github/license/quarkusio/quarkus?style=for-the-badge&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
 This **Quarkus JUnit5 Mockk** extension allows you to easily inject mockk mocks. 
 
 First of all, you need to add the following dependency:
@@ -24,3 +23,32 @@ dependencies {
 }
 ````
 
+# Example
+
+Now, you can use `@InjectMock` and `@InjectSpy` in your test such as: 
+
+````kotlin
+
+@QuarkusTest
+class InjectionMockTest {
+
+    @Inject
+    lateinit var firstService: FirstService
+
+    @InjectMock
+    lateinit var secondService: SecondService
+
+    @Test
+    fun `should respond test`() {
+        every { secondService.greet() } returns "test"
+        assertThat(firstService.greet()).isEqualTo("test")
+    }
+
+    @Test
+    fun `should respond second`() {
+        every { secondService.greet() } returns "second"
+        assertThat(firstService.greet()).isEqualTo("second")
+        verify { secondService.greet() }
+    }
+}
+````
