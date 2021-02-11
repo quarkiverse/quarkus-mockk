@@ -3,7 +3,12 @@
 [![GitHub Actions Status](<https://img.shields.io/github/workflow/status/quarkiverse/quarkus-mockk/Build?logo=GitHub&style=for-the-badge>)](https://github.com/quarkiverse/quarkus-mockk/actions?query=workflow%3ABuild)
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.mockk/quarkus-junit5-mockk?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.mockk/quarkus-junit5-mockk)
 [![License](https://img.shields.io/github/license/quarkusio/quarkus?style=for-the-badge&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
-This **Quarkus JUnit5 Mockk** extension allows you to easily inject mockk mocks. 
+
+## Description
+
+This Quarkus JUnit5 Mockk extension allows you to easily inject mockk mocks.
+
+## Importing the dependency
 
 First of all, you need to add the following dependency:
 
@@ -23,7 +28,7 @@ dependencies {
 }
 ````
 
-# Example
+## Example
 
 Now, you can use `@InjectMock` and `@InjectSpy` in your test such as: 
 
