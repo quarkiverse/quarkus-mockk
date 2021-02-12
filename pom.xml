@@ -16,7 +16,7 @@
     <properties>
         <kotlin.version>1.4.30</kotlin.version>
         <mockk.version>1.10.5</mockk.version>
-        <quarkus.version>1.11.2.Final</quarkus.version>
+        <quarkus.version>1.11.3.Final</quarkus.version>
 
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     </properties>
