@@ -14,9 +14,14 @@
     <name>Quarkus - JUnit 5 - Mockk</name>
 
     <properties>
+
         <kotlin.version>1.4.30</kotlin.version>
         <mockk.version>1.10.6</mockk.version>
         <quarkus.version>1.11.3.Final</quarkus.version>
+        <dokka.version>1.4.20</dokka.version>
+
+        <!-- This plugin is not compatible with kotlin -->
+        <maven.javadoc.skip>true</maven.javadoc.skip>
 
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     </properties>
@@ -96,6 +101,29 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${dokka.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>javadocJar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <!-- This is temporaty as jcenter is going to shutdown -->
+    <!-- for now, dokka dependency are only available on jcenter -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
