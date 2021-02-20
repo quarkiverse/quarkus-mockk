@@ -1,0 +1,31 @@
+= `@InjectSpy` annotation
+
+This annotation allows you to inject spies in your application.
+
+Spy allows you to mixed real objects and mocks.
+
+== Example
+
+For example, `@InjectSpy` can be used in the following example:
+
+[source,kotlin]
+----
+@QuarkusTest
+class InjectionMockTest {
+
+    @InjectSpy
+    lateinit var firstService: FirstService
+
+    @Test
+    fun `should respond test`() {
+        assertThat(firstService.greet()).isEqualTo("Hello")
+    }
+
+    @Test
+    fun `should respond second`() {
+        every { firstService.greet() } returns "mock response"
+        assertThat(firstService.greet()).isEqualTo("mock response")
+        verify { firstService.greet() }
+    }
+}
+----

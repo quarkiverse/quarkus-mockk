@@ -1,22 +1,41 @@
-= Your Quarkiverse Extension
+= Quarkus Mockk Extension
 :extension-status: preview
 
-Describe what the extension does here.
+This extension allows you to inject MockK mocks in your `QuarkusTest` tests.
 
 == Installation
 
-If you want to use this extension, you need to add the `quarkiverse-<YOUR_EXTENSION>` extension first.
+If you want to use this extension, you need to add the `quarkus-junit5-mockk` extension first.
 In your `pom.xml` file, add:
 
 [source,xml]
 ----
 <dependency>
     <groupId>io.quarkiverse.mockk</groupId>
-    <artifactId>quarkiverse-junit5-mockk</artifactId>
+    <artifactId>quarkus-junit5-mockk</artifactId>
+    <version>0.2.0</version>
+    <scope>test</scope>
 </dependency>
 ----
 
-[[extension-configuration-reference]]
-== Extension Configuration Reference
+Or add this in your `build.gradle` file:
 
-include::config.adoc[leveloffset=+1, opts=optional]
+[source,groovy]
+----
+dependencies {
+    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
+}
+----
+
+The extension exposes two annotations:
+
+* `@InjectMock` to inject MockK mocks in your application
+* `@InjectSpy` to inject SpyK spies in your application
+
+== Known limitations
+
+For the moment, this library:
+
+* Does not handle `Mutiny` return types
+* Does not handle mocking `@Singleton` beans
+* Does not handle mocking classes from panache active record pattern
