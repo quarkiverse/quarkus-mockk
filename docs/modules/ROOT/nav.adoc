@@ -1,1 +1,3 @@
-* xref:index.adoc[Quarkiverse - Mockk]
+* xref:index.adoc[Introduction]
+* xref:injectmock.adoc[Inject Mocks]
+* xref:injectspy.adoc[Inject Spies]

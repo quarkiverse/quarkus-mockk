@@ -16,7 +16,7 @@ First of all, you need to add the following dependency:
 <dependency>
     <groupId>io.quarkiverse.mockk</groupId>
     <artifactId>quarkus-junit5-mockk</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -24,7 +24,7 @@ If you are using gradle:
 
 ````groovy
 dependencies {
-    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.1.0'
+    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
 }
 ````
 
@@ -33,7 +33,6 @@ dependencies {
 Now, you can use `@InjectMock` and `@InjectSpy` in your test such as: 
 
 ````kotlin
-
 @QuarkusTest
 class InjectionMockTest {
 

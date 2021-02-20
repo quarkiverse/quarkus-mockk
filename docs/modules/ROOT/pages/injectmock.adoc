@@ -1,0 +1,60 @@
+= `@InjectMock` annotation
+
+This annotation allows you to inject MockK mocks in your application.
+
+This annotation has two parameters:
+
+* `relaxed`, if set to `true`, all function will return simple values. Default to `false`.
+* `relacUnitFun`, if set to `true`, `Unit` function will be relaxed. Default to `false`.
+
+== Example
+
+For example, `@InjectMock` can be used in the following example:
+
+[source,kotlin]
+----
+@QuarkusTest
+class InjectionMockTest {
+
+    @Inject
+    lateinit var firstService: FirstService
+
+    @InjectMock
+    lateinit var secondService: SecondService
+
+    @Test
+    fun `should respond test`() {
+        every { secondService.greet() } returns "test"
+        assertThat(firstService.greet()).isEqualTo("test")
+    }
+
+    @Test
+    fun `should respond second`() {
+        every { secondService.greet() } returns "second"
+        assertThat(firstService.greet()).isEqualTo("second")
+        verify { secondService.greet() }
+    }
+}
+----
+
+In order to mock a `RestClient`,  you must add the `@RestClient` qualifier alongside the `@InjectMock`:
+
+[source,kotlin]
+----
+@QuarkusTest
+class InjectionMockTest {
+
+    @Inject
+    lateinit var firstService: FirstService
+
+    @InjectMock
+    @RestClient
+    lateinit var myRestClientService: MyRestClientService
+
+    @Test
+    fun `should respond test`() {
+        every { myRestClientService.greet() } returns "test"
+        assertThat(firstService.greet()).isEqualTo("test")
+    }
+}
+----
