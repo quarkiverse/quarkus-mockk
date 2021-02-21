@@ -8,6 +8,8 @@
 
 This Quarkus JUnit5 Mockk extension allows you to easily inject mockk mocks.
 
+The full documentation be found [here](https://quarkiverse.github.io/quarkiverse-docs/quarkus-mockk/dev/index.html).
+
 ## Importing the dependency
 
 First of all, you need to add the following dependency:
