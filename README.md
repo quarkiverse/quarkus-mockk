@@ -1,4 +1,4 @@
-# Quarkus JUnit5 Mockk Extension
+# Quarkus JUnit5 MockK Extension
 
 [![GitHub Actions Status](<https://img.shields.io/github/workflow/status/quarkiverse/quarkus-mockk/Build?logo=GitHub&style=for-the-badge>)](https://github.com/quarkiverse/quarkus-mockk/actions?query=workflow%3ABuild)
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.mockk/quarkus-junit5-mockk?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.mockk/quarkus-junit5-mockk)
@@ -6,7 +6,7 @@
 
 ## Description
 
-This Quarkus JUnit5 Mockk extension allows you to easily inject mockk mocks.
+This Quarkus JUnit5 MockK extension allows you to easily inject MockK mocks.
 
 The full documentation be found [here](https://quarkiverse.github.io/quarkiverse-docs/quarkus-mockk/dev/index.html).
 
@@ -26,7 +26,7 @@ If you are using gradle:
 
 ````groovy
 dependencies {
-    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
 }
 ````
 
