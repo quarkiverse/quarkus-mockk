@@ -23,7 +23,7 @@ Or add this in your `build.gradle` file:
 [source,groovy]
 ----
 dependencies {
-    implementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
 }
 ----
 
