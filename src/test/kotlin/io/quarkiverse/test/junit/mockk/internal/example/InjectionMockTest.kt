@@ -13,9 +13,10 @@ import javax.inject.Inject
 class InjectionMockTest {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
+
     @InjectMock
-    lateinit var secondService: SecondService
+    private lateinit var secondService: SecondService
 
     @Test
     fun `should respond test`() {
@@ -33,7 +34,7 @@ class InjectionMockTest {
 
     @ApplicationScoped
     open class FirstService(val secondService: SecondService) {
-        fun greet(): String= secondService.greet()
+        fun greet(): String = secondService.greet()
     }
 
     @ApplicationScoped

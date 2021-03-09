@@ -14,7 +14,7 @@ For example, `@InjectSpy` can be used in the following example:
 class InjectionMockTest {
 
     @InjectSpy
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
 
     @Test
     fun `should respond test`() {

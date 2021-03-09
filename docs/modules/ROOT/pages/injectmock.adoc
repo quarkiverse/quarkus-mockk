@@ -17,10 +17,10 @@ For example, `@InjectMock` can be used in the following example:
 class InjectionMockTest {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
 
     @InjectMock
-    lateinit var secondService: SecondService
+    private lateinit var secondService: SecondService
 
     @Test
     fun `should respond test`() {
@@ -45,11 +45,11 @@ In order to mock a `RestClient`,  you must add the `@RestClient` qualifier along
 class InjectionMockTest {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
 
     @InjectMock
     @RestClient
-    lateinit var myRestClientService: MyRestClientService
+    private lateinit var myRestClientService: MyRestClientService
 
     @Test
     fun `should respond test`() {

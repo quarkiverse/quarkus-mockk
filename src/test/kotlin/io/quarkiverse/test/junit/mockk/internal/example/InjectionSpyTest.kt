@@ -13,9 +13,10 @@ import javax.inject.Inject
 class InjectionSpyTest {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
+
     @InjectSpy
-    lateinit var secondService: SecondService
+    private lateinit var secondService: SecondService
 
     @Test
     fun `should return normal response`() {
