@@ -1,8 +1,5 @@
 package io.quarkiverse.test.junit.mockk.internal.example
 
-import io.mockk.every
-import io.mockk.just
-import io.mockk.runs
 import io.mockk.verify
 import io.quarkiverse.test.junit.mockk.InjectMock
 import io.quarkus.test.junit.QuarkusTest
@@ -14,10 +11,10 @@ import javax.inject.Inject
 class InjectRelaxedMock {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
 
     @InjectMock(relaxed = true)
-    lateinit var secondService: SecondService
+    private lateinit var secondService: SecondService
 
 
     @Test
@@ -34,8 +31,7 @@ class InjectRelaxedMock {
 
     @ApplicationScoped
     open class SecondService {
-        fun run(): Unit  = println("run ran")
+        fun run(): Unit = println("run ran")
     }
-
 
 }

@@ -39,10 +39,10 @@ Now, you can use `@InjectMock` and `@InjectSpy` in your test such as:
 class InjectionMockTest {
 
     @Inject
-    lateinit var firstService: FirstService
+    private lateinit var firstService: FirstService
 
     @InjectMock
-    lateinit var secondService: SecondService
+    private lateinit var secondService: SecondService
 
     @Test
     fun `should respond test`() {

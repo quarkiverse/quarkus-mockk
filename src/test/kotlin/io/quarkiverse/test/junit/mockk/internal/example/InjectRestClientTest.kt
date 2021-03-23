@@ -10,7 +10,6 @@ import org.eclipse.microprofile.rest.client.inject.RestClient
 import org.jboss.resteasy.annotations.jaxrs.PathParam
 import org.junit.jupiter.api.Test
 import javax.enterprise.context.ApplicationScoped
-import javax.enterprise.inject.Default
 import javax.inject.Inject
 import javax.ws.rs.GET
 import javax.ws.rs.Path
@@ -21,15 +20,15 @@ import javax.ws.rs.core.MediaType
 class InjectRestClientTest {
 
     @Inject
-    lateinit var greeterService: GreeterService
+    private lateinit var greeterService: GreeterService
 
     @InjectMock
     @RestClient
-    lateinit var serviceClient: ServiceClient
+    private lateinit var serviceClient: ServiceClient
 
     @Test
     fun `should use mocked serviceClient`() {
-        every {serviceClient.getByName(any())} returns "Quarkus"
+        every { serviceClient.getByName(any()) } returns "Quarkus"
 
         assertThat(greeterService.greet("quarkus")).isEqualTo("Hello Quarkus")
 
@@ -39,7 +38,7 @@ class InjectRestClientTest {
 
     @ApplicationScoped
     class GreeterService(@RestClient val serviceClient: ServiceClient) {
-        fun greet(name: String)= "Hello ${serviceClient.getByName(name)}"
+        fun greet(name: String) = "Hello ${serviceClient.getByName(name)}"
     }
 
     @ApplicationScoped
@@ -52,7 +51,5 @@ class InjectRestClientTest {
         @Produces(MediaType.APPLICATION_JSON)
         fun getByName(@PathParam name: String): String
     }
-
-
 
 }
