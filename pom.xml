@@ -18,7 +18,7 @@
         <kotlin.version>1.4.32</kotlin.version>
         <mockk.version>1.11.0</mockk.version>
         <quarkus.version>1.13.2.Final</quarkus.version>
-        <dokka.version>1.4.30</dokka.version>
+        <dokka.version>1.4.32</dokka.version>
 
         <!-- This plugin is not compatible with kotlin -->
         <maven.javadoc.skip>true</maven.javadoc.skip>
@@ -116,14 +116,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- This is temporaty as jcenter is going to shutdown -->
-    <!-- for now, dokka dependency are only available on jcenter -->
-    <pluginRepositories>
-        <pluginRepository>
-            <id>jcenter</id>
-            <name>JCenter</name>
-            <url>https://jcenter.bintray.com/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
