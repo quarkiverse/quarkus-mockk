@@ -17,7 +17,7 @@
 
         <kotlin.version>1.5.31</kotlin.version>
         <mockk.version>1.12.1</mockk.version>
-        <quarkus.version>2.4.2.Final</quarkus.version>
+        <quarkus.version>2.5.0.Final</quarkus.version>
         <dokka.version>1.5.31</dokka.version>
 
         <!-- This plugin is not compatible with kotlin -->
