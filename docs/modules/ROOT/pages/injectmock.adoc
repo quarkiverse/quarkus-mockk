@@ -2,10 +2,11 @@
 
 This annotation allows you to inject MockK mocks in your application.
 
-This annotation has two parameters:
+This annotation has three parameters:
 
 * `relaxed`, if set to `true`, all function will return simple values. Default to `false`.
 * `relacUnitFun`, if set to `true`, `Unit` function will be relaxed. Default to `false`.
+* `convertScopes`, it set to `true`, convert the `@Singleton` scope of bean to `@ApplicationScoped`. This allows to mock singleton beans
 
 == Example
 
