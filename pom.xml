@@ -18,7 +18,7 @@
         <kotlin.version>1.6.0</kotlin.version>
         <mockk.version>1.12.1</mockk.version>
         <quarkus.version>2.6.1.Final</quarkus.version>
-        <dokka.version>1.6.0</dokka.version>
+        <dokka.version>1.6.10</dokka.version>
 
         <!-- This plugin is not compatible with kotlin -->
         <maven.javadoc.skip>true</maven.javadoc.skip>
