@@ -13,10 +13,10 @@ import javax.inject.Inject
 class InjectionMockTest {
 
     @Inject
-    private lateinit var firstService: FirstService
+    lateinit var firstService: FirstService
 
     @InjectMock
-    private lateinit var secondService: SecondService
+    lateinit var secondService: SecondService
 
     @Test
     fun `should respond test`() {

@@ -13,10 +13,10 @@ import javax.inject.Inject
 class InjectionSpyTest {
 
     @Inject
-    private lateinit var firstService: FirstService
+    lateinit var firstService: FirstService
 
     @InjectSpy
-    private lateinit var secondService: SecondService
+    lateinit var secondService: SecondService
 
     @Test
     fun `should return normal response`() {

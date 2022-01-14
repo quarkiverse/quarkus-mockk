@@ -8,13 +8,13 @@ import javax.enterprise.context.ApplicationScoped
 import javax.inject.Inject
 
 @QuarkusTest
-class InjectRelaxedMock {
+class InjectRelaxedMockTest {
 
     @Inject
-    private lateinit var firstService: FirstService
+    lateinit var firstService: FirstService
 
     @InjectMock(relaxed = true)
-    private lateinit var secondService: SecondService
+    lateinit var secondService: SecondService
 
 
     @Test
