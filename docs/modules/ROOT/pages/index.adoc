@@ -34,8 +34,7 @@ The extension exposes two annotations:
 
 == Known limitations
 
-For the moment, this library:
+For the moment, this library does not :
 
-* Does not handle `Mutiny` return types
-* Does not handle mocking `@Singleton` beans
-* Does not handle mocking classes from panache active record pattern
+* Handle mocking `@Singleton` beans
+* Support mock injection in `@Nested` test classes
