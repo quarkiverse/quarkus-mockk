@@ -20,11 +20,11 @@ import javax.ws.rs.core.MediaType
 class InjectRestClientTest {
 
     @Inject
-    private lateinit var greeterService: GreeterService
+    lateinit var greeterService: GreeterService
 
     @InjectMock
     @RestClient
-    private lateinit var serviceClient: ServiceClient
+    lateinit var serviceClient: ServiceClient
 
     @Test
     fun `should use mocked serviceClient`() {
