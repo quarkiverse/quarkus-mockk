@@ -36,5 +36,4 @@ The extension exposes two annotations:
 
 For the moment, this library does not :
 
-* Handle mocking `@Singleton` beans
 * Support mock injection in `@Nested` test classes

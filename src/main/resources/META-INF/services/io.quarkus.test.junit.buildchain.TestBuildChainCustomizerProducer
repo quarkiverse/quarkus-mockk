@@ -1,1 +1,2 @@
 io.quarkiverse.test.junit.mockk.internal.UnremoveableMockTestBuildChainCustomizerProducer
+io.quarkiverse.test.junit.mockk.internal.SingletonToApplicationScopedTestBuildChainCustomizerProducer
