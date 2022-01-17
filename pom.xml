@@ -10,7 +10,7 @@
 
     <groupId>io.quarkiverse.mockk</groupId>
     <artifactId>quarkus-junit5-mockk</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
     <name>Quarkus - JUnit 5 - Mockk</name>
 
     <properties>
@@ -116,4 +116,8 @@
             </plugin>
         </plugins>
     </build>
+
+  <scm>
+    <tag>0.3.0</tag>
+  </scm>
 </project>
