@@ -13,7 +13,7 @@ In your `pom.xml` file, add:
 <dependency>
     <groupId>io.quarkiverse.mockk</groupId>
     <artifactId>quarkus-junit5-mockk</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <scope>test</scope>
 </dependency>
 ----
@@ -23,7 +23,7 @@ Or add this in your `build.gradle` file:
 [source,groovy]
 ----
 dependencies {
-    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.2.0'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.3.0'
 }
 ----
 
