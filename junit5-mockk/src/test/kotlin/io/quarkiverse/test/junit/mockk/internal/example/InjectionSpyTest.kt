@@ -1,7 +1,6 @@
 package io.quarkiverse.test.junit.mockk.internal.example
 
 import io.mockk.every
-import io.quarkiverse.test.junit.mockk.InjectMock
 import io.quarkiverse.test.junit.mockk.InjectSpy
 import io.quarkus.test.junit.QuarkusTest
 import org.assertj.core.api.Assertions.assertThat
