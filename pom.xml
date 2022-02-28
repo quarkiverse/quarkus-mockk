@@ -16,7 +16,7 @@
 
     <properties>
         <kotlin.version>1.6.10</kotlin.version>
-        <mockk.version>1.12.2</mockk.version>
+        <mockk.version>1.12.3</mockk.version>
         <quarkus.version>2.7.2.Final</quarkus.version>
         <dokka.version>1.6.10</dokka.version>
 
