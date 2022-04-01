@@ -15,7 +15,7 @@
     <name>Quarkus - JUnit 5 - Mockk Parent</name>
 
     <properties>
-        <kotlin.version>1.6.10</kotlin.version>
+        <kotlin.version>1.6.20</kotlin.version>
         <mockk.version>1.12.3</mockk.version>
         <quarkus.version>2.7.5.Final</quarkus.version>
         <dokka.version>1.6.10</dokka.version>
