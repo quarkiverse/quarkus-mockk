@@ -17,7 +17,7 @@
     <properties>
         <kotlin.version>1.6.20</kotlin.version>
         <mockk.version>1.12.3</mockk.version>
-        <quarkus.version>2.7.5.Final</quarkus.version>
+        <quarkus.version>2.8.0.Final</quarkus.version>
         <dokka.version>1.6.20</dokka.version>
 
         <!-- This plugin is not compatible with kotlin -->
