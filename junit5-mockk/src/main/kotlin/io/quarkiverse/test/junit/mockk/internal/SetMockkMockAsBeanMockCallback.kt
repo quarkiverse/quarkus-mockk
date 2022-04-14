@@ -7,7 +7,7 @@ import io.quarkus.test.junit.callback.QuarkusTestMethodContext
 class SetMockkMockAsBeanMockCallback: QuarkusTestBeforeEachCallback {
 
     override fun beforeEach(context: QuarkusTestMethodContext?) {
-        context?.outerInstance?.let {
+        context?.outerInstances?.map {
             MocksTracker.getMocks(it).forEach(::installMock)
         }
         context?.let {MocksTracker.getMocks(it.testInstance).forEach(::installMock)}
