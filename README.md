@@ -18,7 +18,7 @@ First of all, you need to add the following dependency:
 <dependency>
     <groupId>io.quarkiverse.mockk</groupId>
     <artifactId>quarkus-junit5-mockk</artifactId>
-    <version>0.3.0</version>
+    <version>LATEST</version>
     <scope>test</scope>
 </dependency>
 ```
