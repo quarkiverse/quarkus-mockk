@@ -26,7 +26,7 @@ If you are using gradle:
 
 ````groovy
 dependencies {
-    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.3.0'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:LATEST'
 }
 ````
 
