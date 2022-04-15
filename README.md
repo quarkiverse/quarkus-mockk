@@ -26,9 +26,14 @@ If you are using gradle:
 
 ````groovy
 dependencies {
-    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:0.3.0'
+    testImplementation 'io.quarkiverse.mockk:quarkus-junit5-mockk:LATEST'
 }
 ````
+
+## Compatibility with Quarkus
+
+Starting with Quarkus `2.8` and above, version `1.1.0` of `quarkus-junit5-mockk` should be used.
+If you use a version before `2.7`, version `1.0.1` of `quarkus-junit5-mockk` should be used.
 
 ## Example
 
