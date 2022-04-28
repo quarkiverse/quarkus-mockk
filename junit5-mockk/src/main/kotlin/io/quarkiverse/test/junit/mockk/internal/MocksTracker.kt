@@ -17,5 +17,5 @@ object MocksTracker {
         getMocks(testInstance).map{it.mock}.forEach(::clearMocks)
     }
 
-    data class Mocked(val mock: Any, val beanInstance: Any)
+    class Mocked(val mock: Any, val beanInstance: Any)
 }
