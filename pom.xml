@@ -18,7 +18,7 @@
         <kotlin.version>1.7.10</kotlin.version>
         <mockk.version>1.12.4</mockk.version>
 
-        <quarkus.version>2.11.0.Final</quarkus.version>
+        <quarkus.version>2.11.1.Final</quarkus.version>
         <dokka.version>1.7.10</dokka.version>
         <assertj.version>3.23.1</assertj.version>
 
