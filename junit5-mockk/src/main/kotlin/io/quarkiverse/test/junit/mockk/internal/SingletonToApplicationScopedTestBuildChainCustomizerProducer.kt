@@ -5,7 +5,6 @@ import io.quarkus.arc.deployment.AnnotationsTransformerBuildItem
 import io.quarkus.arc.processor.AnnotationsTransformer
 import io.quarkus.arc.processor.DotNames
 import io.quarkus.builder.BuildChainBuilder
-import io.quarkus.builder.BuildStep
 import io.quarkus.test.junit.buildchain.TestBuildChainCustomizerProducer
 import org.jboss.jandex.AnnotationTarget
 import org.jboss.jandex.AnnotationValue
@@ -20,9 +19,9 @@ class SingletonToApplicationScopedTestBuildChainCustomizerProducer: TestBuildCha
         val INJECT_MOCK: DotName = DotName.createSimple(InjectMock::class.java.name)
     }
 
-    override fun produce(testClassesIndex: Index): Consumer<BuildChainBuilder?>? = Consumer { buildChainBuilder ->
-        buildChainBuilder?.let {it.addBuildStep(BuildStep { context ->
-            val mockTypes = testClassesIndex?.getAnnotations(INJECT_MOCK)
+    override fun produce(testClassesIndex: Index): Consumer<BuildChainBuilder?> = Consumer { buildChainBuilder ->
+        buildChainBuilder?.let { buildChainBuilder.addBuildStep { context ->
+            val mockTypes = testClassesIndex.getAnnotations(INJECT_MOCK)
                 ?.filter { it.target().kind() == AnnotationTarget.Kind.FIELD }
                 ?.filter {
                     val allowScopeConversionValue = it.value("convertScopes")
@@ -41,7 +40,7 @@ class SingletonToApplicationScopedTestBuildChainCustomizerProducer: TestBuildCha
                         if (target.kind() == AnnotationTarget.Kind.CLASS) { // scope on bean case
                             val classInfo = target.asClass()
                             if (isMatchingBean(classInfo)) {
-                                if (classInfo.classAnnotation(DotNames.SINGLETON) != null) {
+                                if (classInfo.declaredAnnotation(DotNames.SINGLETON) != null) {
                                     replaceSingletonWithApplicationScoped(transformationContext)
                                 }
                             }
@@ -84,6 +83,7 @@ class SingletonToApplicationScopedTestBuildChainCustomizerProducer: TestBuildCha
                     }
                 }))
             }
-        })}?.produces(AnnotationsTransformerBuildItem::class.java)?.build()
+        }
+        }?.produces(AnnotationsTransformerBuildItem::class.java)?.build()
     }
 }
