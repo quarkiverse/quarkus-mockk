@@ -6,7 +6,7 @@ import io.quarkus.test.junit.QuarkusTest
 import io.smallrye.mutiny.Uni
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import javax.enterprise.context.ApplicationScoped
+import jakarta.enterprise.context.ApplicationScoped
 
 @QuarkusTest
 class ReturnMutinyTypeTest {

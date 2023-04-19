@@ -5,7 +5,7 @@ import io.quarkiverse.test.junit.mockk.InjectSpy
 import io.quarkus.arc.Arc
 import java.lang.IllegalStateException
 import java.lang.reflect.Field
-import javax.inject.Qualifier
+import jakarta.inject.Qualifier
 
 object ReflectionUtils {
 
