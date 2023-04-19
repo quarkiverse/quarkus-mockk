@@ -5,8 +5,8 @@ import io.quarkiverse.test.junit.mockk.InjectSpy
 import io.quarkus.test.junit.QuarkusTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import javax.enterprise.context.ApplicationScoped
-import javax.inject.Inject
+import jakarta.enterprise.context.ApplicationScoped
+import jakarta.inject.Inject
 
 @QuarkusTest
 class InjectionSpyTest {
