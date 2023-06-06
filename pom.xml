@@ -22,7 +22,7 @@
     <kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
   </properties>
   <scm>
-    <connection>:git:git@github.com:quarkiverse/quarkus-mockk.git</connection>
+    <connection>scm:git:git@github.com:quarkiverse/quarkus-mockk.git</connection>
     <developerConnection>scm:git:git@github.com:quarkiverse/quarkus-mockk.git</developerConnection>
     <url>https://github.com/quarkiverse/quarkus-mockk</url>
   </scm>
