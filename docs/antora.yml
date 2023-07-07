@@ -1,5 +1,5 @@
 name: quarkus-mockk
-title: Quarkus Mockk
+title: Mockk
 version: dev
 nav:
   - modules/ROOT/nav.adoc
