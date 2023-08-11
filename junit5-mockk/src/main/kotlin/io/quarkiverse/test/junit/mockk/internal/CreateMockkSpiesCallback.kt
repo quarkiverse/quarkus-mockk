@@ -2,7 +2,7 @@ package io.quarkiverse.test.junit.mockk.internal
 
 import io.mockk.spyk
 import io.quarkiverse.test.junit.mockk.InjectSpy
-import io.quarkus.arc.runtime.ClientProxyUnwrapper
+import io.quarkus.arc.ClientProxy
 import io.quarkus.test.junit.callback.QuarkusTestAfterConstructCallback
 import java.lang.reflect.Field
 
@@ -24,8 +24,7 @@ class CreateMockkSpiesCallback: QuarkusTestAfterConstructCallback {
     }
 
     private fun createSpyAndSetTestField(testInstance: Any, field: Field, beanInstance: Any): Any {
-        val unwrapper = ClientProxyUnwrapper()
-        val spy = spyk(unwrapper.apply(beanInstance))
+        val spy = spyk(ClientProxy.unwrap(beanInstance))
         if (field.trySetAccessible()) {
             field.set(testInstance, spy)
         }
