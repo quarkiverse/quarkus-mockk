@@ -1,6 +1,6 @@
 package org.acme
 
-import javax.inject.Singleton
+import jakarta.inject.Singleton
 
 @Singleton
 open class SingletonService {

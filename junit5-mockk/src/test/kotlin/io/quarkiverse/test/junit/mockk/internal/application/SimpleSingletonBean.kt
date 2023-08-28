@@ -1,6 +1,6 @@
 package io.quarkiverse.test.junit.mockk.internal.application
 
-import javax.inject.Singleton
+import jakarta.inject.Singleton
 
 @Singleton
 open class SimpleSingletonBean {
