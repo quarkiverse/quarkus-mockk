@@ -41,6 +41,9 @@ If you use a version before `2.7`, version `1.0.1` of `quarkus-junit5-mockk` sho
 Now, you can use `@InjectMock` and `@InjectSpy` in your test such as: 
 
 ````kotlin
+// GOTCHA! Do not use the standard annotation of the same name from the io.quarkus.test package.
+import io.quarkiverse.test.junit.mockk.InjectMock
+
 @QuarkusTest
 class InjectionMockTest {
 
