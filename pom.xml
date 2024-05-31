@@ -11,19 +11,19 @@
     <groupId>io.quarkiverse.mockk</groupId>
     <artifactId>quarkus-junit5-mockk-parent</artifactId>
     <packaging>pom</packaging>
-    <version>2.2.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <name>Quarkus - JUnit 5 - Mockk Parent</name>
 
     <properties>
         <kotlin.version>1.9.22</kotlin.version>
         <mockk.version>1.13.10</mockk.version>
-        <quarkus.version>3.6.5</quarkus.version>
+        <quarkus.version>3.8.4</quarkus.version>
         <dokka.version>1.9.10</dokka.version>
         <assertj.version>3.25.3</assertj.version>
 
         <!-- This plugin is not compatible with kotlin -->
         <maven.javadoc.skip>true</maven.javadoc.skip>
-        <kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
+        <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
     </properties>
 
     <scm>
