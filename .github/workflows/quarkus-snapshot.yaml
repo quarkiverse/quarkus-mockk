@@ -23,7 +23,7 @@ jobs:
     name: "Build against latest Quarkus snapshot"
     runs-on: ubuntu-latest
     # Allow <ADMIN> to manually launch the ecosystem CI in addition to the bots
-    if: github.actor == 'quarkusbot' || github.actor == 'quarkiversebot' || github.actor == 'glefloch'
+    if: github.actor == 'quarkusbot' || github.actor == 'quarkiversebot' || github.actor == 'glefloch' || github.actor == 'janpk'
 
     steps:
       - name: Install yq
