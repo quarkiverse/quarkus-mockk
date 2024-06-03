@@ -7,12 +7,12 @@ import io.quarkus.test.junit.QuarkusTest
 import org.assertj.core.api.Assertions.assertThat
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient
 import org.eclipse.microprofile.rest.client.inject.RestClient
-import org.jboss.resteasy.annotations.jaxrs.PathParam
 import org.junit.jupiter.api.Test
 import jakarta.enterprise.context.ApplicationScoped
 import jakarta.inject.Inject
 import jakarta.ws.rs.GET
 import jakarta.ws.rs.Path
+import jakarta.ws.rs.PathParam
 import jakarta.ws.rs.Produces
 import jakarta.ws.rs.core.MediaType
 
@@ -49,7 +49,7 @@ class InjectRestClientTest {
         @GET
         @Path("/name/{name}")
         @Produces(MediaType.APPLICATION_JSON)
-        fun getByName(@PathParam name: String): String
+        fun getByName(@PathParam("name") name: String): String
     }
 
 }
