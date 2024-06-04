@@ -1,6 +1,6 @@
 # Quarkus JUnit5 MockK Extension
 
-[![GitHub Actions Status](<https://img.shields.io/github/workflow/status/quarkiverse/quarkus-mockk/Build?logo=GitHub&style=for-the-badge>)](https://github.com/quarkiverse/quarkus-mockk/actions?query=workflow%3ABuild)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/quarkiverse/quarkus-mockk/build.yml?style=for-the-badge&logo=github)
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.mockk/quarkus-junit5-mockk?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.mockk/quarkus-junit5-mockk)
 [![License](https://img.shields.io/github/license/quarkusio/quarkus?style=for-the-badge&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
 
