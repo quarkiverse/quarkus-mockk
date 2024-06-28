@@ -33,7 +33,7 @@ dependencies {
 ## Compatibility with Quarkus
 
 Starting with version `3.8+`, version `3+` of `quarkus-junit5-mockk` should be used.
-If you use a version between ˋ3.0.0`, and before `3.8.0`, version `2.0.0` of `quarkus-junit5-mockk` should be used.
+If you use a version between `3.0.0`, and before `3.8.0`, version `2.0.0` of `quarkus-junit5-mockk` should be used.
 If you use a version between `2.8` and before `3.0.0`, version `1.1.0` of `quarkus-junit5-mockk` should be used.
 If you use a version before `2.7`, version `1.0.1` of `quarkus-junit5-mockk` should be used.
 
