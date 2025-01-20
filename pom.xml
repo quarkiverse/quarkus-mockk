@@ -19,7 +19,7 @@
         <mockk.version>1.13.12</mockk.version>
         <quarkus.version>3.13.1</quarkus.version>
         <dokka.version>1.9.20</dokka.version>
-        <assertj.version>3.26.3</assertj.version>
+        <assertj.version>3.27.3</assertj.version>
 
         <!-- This plugin is not compatible with kotlin -->
         <maven.javadoc.skip>true</maven.javadoc.skip>
