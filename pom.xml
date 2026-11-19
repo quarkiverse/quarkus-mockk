@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.quarkiverse</groupId>
         <artifactId>quarkiverse-parent</artifactId>
-        <version>20</version>
+        <version>25</version>
     </parent>
 
     <groupId>io.quarkiverse.mockk</groupId>
@@ -15,9 +15,9 @@
     <name>Quarkus - JUnit 5 - Mockk Parent</name>
 
     <properties>
-        <kotlin.version>2.2.20</kotlin.version>
+        <kotlin.version>2.4.10</kotlin.version>
         <mockk.version>1.14.6</mockk.version>
-        <quarkus.version>3.28.3</quarkus.version>
+        <quarkus.version>3.40.0</quarkus.version>
         <dokka.version>2.1.0</dokka.version>
         <assertj.version>3.27.6</assertj.version>
 
